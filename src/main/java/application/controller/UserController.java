@@ -18,7 +18,7 @@ import application.service.UserService;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 @RequestMapping("/api")
 public class UserController {
 

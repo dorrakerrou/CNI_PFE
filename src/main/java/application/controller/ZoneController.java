@@ -22,7 +22,7 @@ public class ZoneController {
 	ZoneDao zonedao;
 	
     @RequestMapping(value = "/listzone", method = RequestMethod.GET)
-	public List<Zone> getAllCategories(){
+	public List<Zone> getAllZones(){
 		return zonedao.findAll();
 	}
     

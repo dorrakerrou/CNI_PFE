@@ -17,8 +17,7 @@ public class OrdMisPK implements Serializable {
     @Column(name = "CODE")
     private String code;
 
-    @Column(name="CIN")
-    private String cin;
+    
 
     
     @Column(name = "NUMORD")
@@ -51,13 +50,6 @@ public class OrdMisPK implements Serializable {
 		this.numMission = numMission;
 	}
 
-	public String getCin() {
-		return cin;
-	}
-
-	public void setCin(String cin) {
-		this.cin = cin;
-	}
 
 
 }

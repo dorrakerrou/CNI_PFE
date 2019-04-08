@@ -12,12 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import application.model.Mission;
-import application.model.Missionnaire;
 import application.model.OrdMis;
 import application.repository.Ord_MissRepository;
-import application.service.Missiondao;
 import application.service.Ord_MissDao;
 
 @RestController
@@ -51,7 +47,7 @@ public class Ord_MissController  {
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public Boolean deleteord(@RequestBody OrdMis ord) {
 	
-			if (repository.delete(ord.getCode(),ord.getCin(),ord.getNumord(),ord.getNumMission())==1) {
+			if (repository.delete(ord.getCode(),ord.getNumord(),ord.getNumMission())==1) {
 				return true;
 				
 			}

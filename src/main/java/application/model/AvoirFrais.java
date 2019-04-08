@@ -49,10 +49,7 @@ public class AvoirFrais implements Serializable {
     @Column(name = "COD_PAYS")
     private String codPays;
     
-    @Id
-    @Column(name = "CIN")
-    private String cin;
-	
+   
 
     @Column(name = "VALEUR_P")
     private BigDecimal valeurP;
@@ -80,8 +77,7 @@ public class AvoirFrais implements Serializable {
  
 
     @JoinColumns({
-        @JoinColumn(name = "CODE", referencedColumnName = "CODE", insertable = false, updatable = false),
-        @JoinColumn(name = "CIN", referencedColumnName = "CIN", insertable = false, updatable = false)
+        @JoinColumn(name = "CODE", referencedColumnName = "CODE", insertable = false, updatable = false) 
         , @JoinColumn(name = "NUMORD", referencedColumnName = "NUMORD", insertable = false, updatable = false)
         , @JoinColumn(name = "NUM_MISSION", referencedColumnName = "NUM_MISSION", insertable = false, updatable = false)})
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
@@ -99,27 +95,7 @@ public class AvoirFrais implements Serializable {
 	
     
     
-	public AvoirFrais(String numMission, short numord, String typFrais, String codPays, String cin, BigDecimal valeurP,
-			BigDecimal valeurR, String supporte, String supCode, String codPrj, String observ, String aobserv,
-			OrdMis ordMis, Pays pays, TypFrais typFrais1) {
-		super();
-		this.numMission = numMission;
-		this.numord = numord;
-		this.typFrais = typFrais;
-		this.codPays = codPays;
-		this.cin = cin;
-		this.valeurP = valeurP;
-		this.valeurR = valeurR;
-		this.supporte = supporte;
-		this.supCode = supCode;
-		this.codPrj = codPrj;
-		this.observ = observ;
-		this.aobserv = aobserv;
-		this.ordMis = ordMis;
-		this.pays = pays;
-		this.typFrais1 = typFrais1;
-	}
-
+	
 	public String getNumMission() {
 		return numMission;
 	}
@@ -152,13 +128,7 @@ public class AvoirFrais implements Serializable {
 		this.codPays = codPays;
 	}
 
-	public String getCin() {
-		return cin;
-	}
 
-	public void setCin(String cin) {
-		this.cin = cin;
-	}
 
 	public BigDecimal getValeurP() {
 		return valeurP;

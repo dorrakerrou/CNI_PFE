@@ -2,11 +2,8 @@ package application.model;
 
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -22,7 +19,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Projet implements Serializable{
 	
-	   // @EmbeddedId
+	   /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	// @EmbeddedId
 	    //protected ProjetPK projetPK;
 	    
 	@Id

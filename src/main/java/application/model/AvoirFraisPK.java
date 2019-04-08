@@ -23,18 +23,9 @@ public class AvoirFraisPK implements Serializable {
     @Column(name = "COD_PAYS")
     private String codPays;
     
-    @Column(name = "CIN")
-    private String cin;
-    
+   
     
 
-    public String getCin() {
-		return cin;
-	}
-
-	public void setCin(String cin) {
-		this.cin = cin;
-	}
 
 	public AvoirFraisPK() {
     }

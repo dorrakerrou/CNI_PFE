@@ -20,8 +20,8 @@ public interface Ord_MissRepository extends JpaRepository<OrdMis, Class<OrdMisPK
 	
 	@Transactional
 	@Modifying
-	@Query("delete from OrdMis ord where  ord.code=:i and ord.cin=:j and ord.numord=:k and ord.numMission=:l ")
-	int delete(@Param("i") String code,@Param("j") String cin,@Param("k") short numord,@Param("l") String numMission);
+	@Query("delete from OrdMis ord where  ord.code=:i and ord.numord=:k and ord.numMission=:l ")
+	int delete(@Param("i") String code,@Param("k") short numord,@Param("l") String numMission);
 
 	
 	//@Query("select o from Missionnaire o ,DeptGen p where p.code =:codeDept and  o.code= p.code ")
